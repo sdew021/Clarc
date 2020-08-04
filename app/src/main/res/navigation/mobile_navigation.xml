@@ -3,23 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_nearby">
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_india"
         android:name="com.example.clarc.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_india" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_global"
         android:name="com.example.clarc.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_global" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_state"
         android:name="com.example.clarc.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_state" />
+
+    <fragment
+        android:id="@+id/navigation_nearby"
+        android:name="com.example.clarc.ui.nearby.NearbyFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_nearby" />
 </navigation>
