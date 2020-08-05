@@ -21,8 +21,8 @@ class NearbyFragment : Fragment() {
     ): View? {
         nearbyViewModel =
                 ViewModelProviders.of(this).get(NearbyViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_india, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
+        val root = inflater.inflate(R.layout.fragment_nearby, container, false)
+        val textView: TextView = root.findViewById(R.id.text_nearby)
         nearbyViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })

@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">Clarc</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="app_name">CoroNews</string>
+    <string name="title_home">Indian Status</string>
+    <string name="title_dashboard">Global Status</string>
+    <string name="title_notifications">Statewise Status</string>
+    <string name="title_nearby">Nearby Status</string>
 </resources>

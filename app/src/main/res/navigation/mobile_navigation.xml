@@ -26,6 +26,6 @@
     <fragment
         android:id="@+id/navigation_nearby"
         android:name="com.example.clarc.ui.nearby.NearbyFragment"
-        android:label="@string/title_notifications"
+        android:label="@string/title_nearby"
         tools:layout="@layout/fragment_nearby" />
 </navigation>
