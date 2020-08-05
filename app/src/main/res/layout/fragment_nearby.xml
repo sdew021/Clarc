@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.nearby.NearbyFragment"
-    android:background="@drawable/corona2"
-    android:alpha="0.9">
+        android:background="#1e1e30"
+    tools:context=".ui.nearby.NearbyFragment">
 
     <TextView
         android:id="@+id/text_nearby"
