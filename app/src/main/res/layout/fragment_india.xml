@@ -4,13 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="55dp"
     android:background="#1e1e30"
     android:orientation="vertical"
     tools:context=".ui.india.IndiaFragment">
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/indiaText"
+        android:text="Last Updated on "
         android:layout_width="match_parent"
-        android:layout_height="75dp">
+        android:gravity="end"
+        android:textStyle="bold|italic"
+        android:layout_height="25dp">
 
     </com.google.android.material.textview.MaterialTextView>
 
@@ -29,9 +34,8 @@
             android:gravity="center"
             android:text="Confirmed"
             android:textColor="#ff073a"
-            android:textStyle="bold">
+            android:textStyle="bold"/>
 
-        </com.google.android.material.textview.MaterialTextView>
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/indiaActive"
@@ -42,9 +46,7 @@
             android:gravity="center"
             android:text="Active"
             android:textColor="#007bff"
-            android:textStyle="bold">
-
-        </com.google.android.material.textview.MaterialTextView>
+            android:textStyle="bold"/>
 
     </LinearLayout>
 
@@ -63,9 +65,7 @@
             android:gravity="center"
             android:text="Recovered"
             android:textColor="#28a745"
-            android:textStyle="bold">
-
-        </com.google.android.material.textview.MaterialTextView>
+            android:textStyle="bold"/>
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/indiaDeceased"
@@ -76,9 +76,16 @@
             android:gravity="center"
             android:text="Deceased"
             android:textColor="#6c757d"
-            android:textStyle="bold">
-
-        </com.google.android.material.textview.MaterialTextView>
+            android:textStyle="bold"/>
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/indiaListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/list_item">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </LinearLayout>

@@ -3,4 +3,15 @@
     <color name="colorPrimary">#4C75F2</color>
     <color name="colorPrimaryDark">#1e1e30</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="active">#007bff</color>
+    <color name="confirmed">#ff073a</color>
+    <color name="deceased">#6c757d</color>
+    <color name="recovered">#28a745</color>
+    <color name="activeBg">#1a007bff</color>
+    <color name="confirmedBg">#1aff073a</color>
+    <color name="deceasedBg">#1a6c757d</color>
+    <color name="recoveredBg">#1a28a745</color>
+    <color name="primaryDarkBg">#1a1e1e30</color>
+    <color name="primaryBg">#1a4C75F2</color>
+
 </resources>

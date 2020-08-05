@@ -5,14 +5,20 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.example.clarc.MainActivity
 import com.example.clarc.R
+import com.example.clarc.adapters.ListAdapter
 import com.google.android.material.textview.MaterialTextView
+import kotlinx.android.synthetic.main.fragment_india.*
+import org.json.JSONArray
 import org.json.JSONObject
 
 class IndiaFragment : Fragment() {
@@ -22,6 +28,7 @@ class IndiaFragment : Fragment() {
     private lateinit var indiaRecovered: MaterialTextView
     private lateinit var indiaDeceased: MaterialTextView
     private lateinit var indiaText: MaterialTextView
+    private lateinit var res:JSONArray
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -33,6 +40,8 @@ class IndiaFragment : Fragment() {
         indiaActive = root.findViewById(R.id.indiaActive)
         indiaRecovered = root.findViewById(R.id.indiaRecovered)
         indiaDeceased = root.findViewById(R.id.indiaDeceased)
+        indiaText = root.findViewById(R.id.indiaText)
+        res = JSONArray()
         return root
     }
 
@@ -44,16 +53,45 @@ class IndiaFragment : Fragment() {
             Request.Method.GET, url,
             Response.Listener<String> { response ->
                 // Display the first 500 characters of the response string.
-                val res = JSONObject(response).getJSONArray("statewise")
-                res.getJSONObject(0).get("active")
+                res = JSONObject(response).getJSONArray("statewise")
+                for(i in 0 until res.length()){
+                    Log.d("JSON CHECK","Json Object $i : ${res.getJSONObject(i).get("state")}")
+                }
+                indiaListView.apply {
+                    layoutManager = LinearLayoutManager(activity)
+                    adapter = ListAdapter(parseData(res))
+                }
                 indiaConfirmed.text = indiaConfirmed.text.toString() + "\n" + res.getJSONObject(0).get("confirmed").toString()
                 indiaActive.text = indiaActive.text.toString() + "\n" + res.getJSONObject(0).get("active").toString()
                 indiaRecovered.text = indiaRecovered.text.toString() + "\n" + res.getJSONObject(0).get("recovered").toString()
                 indiaDeceased.text = indiaDeceased.text.toString() + "\n" + res.getJSONObject(0).get("deaths").toString()
+                indiaText.text = indiaText.text.toString() + " " + res.getJSONObject(0).get("lastupdatedtime").toString()
             },
             Response.ErrorListener { Log.d("Resp Error India", "onViewCreated: That didn't work!") })
 
         queue.add(stringRequest)
 
+
+
+    }
+
+    private fun parseData(res: JSONArray): List<MainActivity.Data> {
+        val retList: MutableList<MainActivity.Data> = mutableListOf()
+        for(i in 0 until res.length()){
+            Log.d("JSON CHECK","Json Object $i : ${res.getJSONObject(i).get("state")}")
+            val data = MainActivity.Data(
+                res.getJSONObject(i).get("state").toString(),
+                res.getJSONObject(i).get("lastupdatedtime").toString(),
+                res.getJSONObject(i).get("confirmed").toString(),
+                res.getJSONObject(i).get("active").toString(),
+                res.getJSONObject(i).get("recovered").toString(),
+                res.getJSONObject(i).get("deaths").toString()
+
+            )
+            if(data.name!="Total"){
+                retList.add(data)
+            }
+        }
+        return retList
     }
 }
