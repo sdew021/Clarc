@@ -16,7 +16,6 @@ import kotlinx.android.synthetic.main.fragment_global.*
 
 class GlobalFragment : Fragment() {
 
-    private lateinit var globalViewModel: GlobalViewModel
     private lateinit var globalConfirmed: MaterialTextView
     private lateinit var globalActive: MaterialTextView
     private lateinit var globalRecovered: MaterialTextView
@@ -27,8 +26,6 @@ class GlobalFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        globalViewModel =
-                ViewModelProviders.of(this).get(GlobalViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_global, container, false)
         globalConfirmed = root.findViewById(R.id.globalConfirmed)
         globalActive = root.findViewById(R.id.globalActive)
