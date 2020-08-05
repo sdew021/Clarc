@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_global"
-        android:name="com.example.clarc.ui.dashboard.DashboardFragment"
+        android:name="com.example.clarc.ui.global.GlobalFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_global" />
 
