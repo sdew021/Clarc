@@ -16,15 +16,16 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="75dp"
         android:orientation="horizontal"
-        android:weightSum="4">
+        android:weightSum="2">
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/globalConfirmed"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="Confirmed"
+            android:background="#1AFF073A"
             android:textStyle="bold"
             android:textColor="#ff073a"
             android:gravity="center">
@@ -36,33 +37,43 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="Active"
+            android:background="#1A007BFF"
             android:textStyle="bold"
             android:textColor="#007bff"
             android:gravity="center">
 
         </com.google.android.material.textview.MaterialTextView>
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/globalRecovered"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:text="Recovered"
-            android:textStyle="bold"
-            android:textColor="#28a745"
-            android:gravity="center">
 
-        </com.google.android.material.textview.MaterialTextView>
+    </LinearLayout>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/globalRecovered"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="Recovered"
+            android:background="#1A28A745"
+        android:textStyle="bold"
+        android:textColor="#28a745"
+        android:gravity="center">
+
+    </com.google.android.material.textview.MaterialTextView>
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/globalDeceased"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="Deceased"
+            android:background="#1A6C757D"
             android:textStyle="bold"
             android:textColor="#6c757d"
             android:gravity="center">
 
         </com.google.android.material.textview.MaterialTextView>
 
-    </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </LinearLayout>

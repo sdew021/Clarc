@@ -7,6 +7,7 @@
     android:background="#1e1e30"
     android:orientation="vertical"
     tools:context=".ui.india.IndiaFragment">
+
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="75dp">
@@ -15,53 +16,69 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="75dp"
         android:orientation="horizontal"
-        android:weightSum="4">
+        android:weightSum="2">
+
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/indiaConfirmed"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#1AFF073A"
+            android:gravity="center"
             android:text="Confirmed"
-            android:textStyle="bold"
             android:textColor="#ff073a"
-            android:gravity="center">
+            android:textStyle="bold">
 
         </com.google.android.material.textview.MaterialTextView>
+
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/indiaActive"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#1A007BFF"
+            android:gravity="center"
             android:text="Active"
-            android:textStyle="bold"
             android:textColor="#007bff"
-            android:gravity="center">
-
-        </com.google.android.material.textview.MaterialTextView>
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/indiaRecovered"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:text="Recovered"
-            android:textStyle="bold"
-            android:textColor="#28a745"
-            android:gravity="center">
-
-        </com.google.android.material.textview.MaterialTextView>
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/indiaDeceased"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:text="Deceased"
-            android:textStyle="bold"
-            android:textColor="#6c757d"
-            android:gravity="center">
+            android:textStyle="bold">
 
         </com.google.android.material.textview.MaterialTextView>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/indiaRecovered"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#1A28A745"
+            android:gravity="center"
+            android:text="Recovered"
+            android:textColor="#28a745"
+            android:textStyle="bold">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/indiaDeceased"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#1A6C757D"
+            android:gravity="center"
+            android:text="Deceased"
+            android:textColor="#6c757d"
+            android:textStyle="bold">
+
+        </com.google.android.material.textview.MaterialTextView>
+    </LinearLayout>
+
 </LinearLayout>
