@@ -8,6 +8,7 @@
     android:orientation="vertical"
     tools:context=".ui.global.GlobalFragment">
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/globalText"
         android:layout_width="match_parent"
         android:layout_height="75dp">
 
