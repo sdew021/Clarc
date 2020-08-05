@@ -1,4 +1,4 @@
-package com.example.clarc.ui.home
+package com.example.clarc.ui.state
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,11 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import com.example.clarc.R
 
-class HomeFragment : Fragment() {
+class StateFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -18,8 +16,7 @@ class HomeFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_india, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
+        val root = inflater.inflate(R.layout.fragment_state, container, false)
         return root
     }
 }

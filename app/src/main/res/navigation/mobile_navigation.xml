@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_india"
-        android:name="com.example.clarc.ui.home.HomeFragment"
+        android:name="com.example.clarc.ui.india.IndiaFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_india" />
 
@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_state"
-        android:name="com.example.clarc.ui.notifications.NotificationsFragment"
+        android:name="com.example.clarc.ui.state.StateFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_state" />
 
