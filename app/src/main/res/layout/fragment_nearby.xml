@@ -9,13 +9,11 @@
     tools:context=".ui.nearby.NearbyFragment">
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
-        android:layout_height="75dp">
-
-    </com.google.android.material.textview.MaterialTextView>
+        android:layout_height="25dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="150dp"
         android:orientation="horizontal"
         android:weightSum="4">
         <com.google.android.material.textview.MaterialTextView
@@ -23,45 +21,46 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginHorizontal="5dp"
             android:text="Confirmed"
+            android:background="@color/confirmedBg"
             android:textStyle="bold"
-            android:textColor="#ff073a"
-            android:gravity="center">
-
-        </com.google.android.material.textview.MaterialTextView>
+            android:textColor="@color/confirmed"
+            android:gravity="center"/>
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/nearbyActive"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginHorizontal="5dp"
             android:text="Active"
+            android:background="@color/activeBg"
             android:textStyle="bold"
-            android:textColor="#007bff"
-            android:gravity="center">
+            android:textColor="@color/active"
+            android:gravity="center"/>
 
-        </com.google.android.material.textview.MaterialTextView>
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/nearbyRecovered"
             android:layout_weight="1"
             android:layout_width="0dp"
+            android:background="@color/recoveredBg"
             android:layout_height="match_parent"
+            android:layout_marginHorizontal="5dp"
             android:text="Recovered"
             android:textStyle="bold"
-            android:textColor="#28a745"
-            android:gravity="center">
-
-        </com.google.android.material.textview.MaterialTextView>
+            android:textColor="@color/recovered"
+            android:gravity="center"/>
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/nearbyDeceased"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="Deceased"
+            android:background="@color/deceasedBg"
+            android:layout_marginHorizontal="5dp"
             android:textStyle="bold"
-            android:textColor="#6c757d"
-            android:gravity="center">
-
-        </com.google.android.material.textview.MaterialTextView>
+            android:textColor="@color/deceased"
+            android:gravity="center"/>
 
     </LinearLayout>
 </LinearLayout>

@@ -27,6 +27,9 @@ class IndiaFragment : Fragment() {
     private lateinit var indiaActive: MaterialTextView
     private lateinit var indiaRecovered: MaterialTextView
     private lateinit var indiaDeceased: MaterialTextView
+    private lateinit var indiaConfirmedDelta: MaterialTextView
+    private lateinit var indiaRecoveredDelta: MaterialTextView
+    private lateinit var indiaDeceasedDelta: MaterialTextView
     private lateinit var indiaText: MaterialTextView
     private lateinit var res:JSONArray
 
@@ -40,6 +43,9 @@ class IndiaFragment : Fragment() {
         indiaActive = root.findViewById(R.id.indiaActive)
         indiaRecovered = root.findViewById(R.id.indiaRecovered)
         indiaDeceased = root.findViewById(R.id.indiaDeceased)
+        indiaConfirmedDelta = root.findViewById(R.id.indiaConfirmedDelta)
+        indiaRecoveredDelta = root.findViewById(R.id.indiaRecoveredDelta)
+        indiaDeceasedDelta = root.findViewById(R.id.indiaDeceasedDelta)
         indiaText = root.findViewById(R.id.indiaText)
         res = JSONArray()
         return root
@@ -61,10 +67,13 @@ class IndiaFragment : Fragment() {
                     layoutManager = LinearLayoutManager(activity)
                     adapter = ListAdapter(parseData(res))
                 }
-                indiaConfirmed.text = indiaConfirmed.text.toString() + "\n" + res.getJSONObject(0).get("confirmed").toString()
-                indiaActive.text = indiaActive.text.toString() + "\n" + res.getJSONObject(0).get("active").toString()
-                indiaRecovered.text = indiaRecovered.text.toString() + "\n" + res.getJSONObject(0).get("recovered").toString()
-                indiaDeceased.text = indiaDeceased.text.toString() + "\n" + res.getJSONObject(0).get("deaths").toString()
+                indiaConfirmed.text =  res.getJSONObject(0).get("confirmed").toString()
+                indiaActive.text = res.getJSONObject(0).get("active").toString()
+                indiaRecovered.text =  res.getJSONObject(0).get("recovered").toString()
+                indiaDeceased.text =  res.getJSONObject(0).get("deaths").toString()
+                indiaConfirmedDelta.text = "+"+ res.getJSONObject(0).get("deltaconfirmed").toString()
+                indiaRecoveredDelta.text = "+"+ res.getJSONObject(0).get("deltarecovered").toString()
+                indiaDeceasedDelta.text = "+"+ res.getJSONObject(0).get("deltadeaths").toString()
                 indiaText.text = indiaText.text.toString() + " " + res.getJSONObject(0).get("lastupdatedtime").toString()
             },
             Response.ErrorListener { Log.d("Resp Error India", "onViewCreated: That didn't work!") })
