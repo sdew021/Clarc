@@ -8,3 +8,4 @@ i play football
 - Good learning
 - Great understanding
 - Better features can be implemented
+- Try to include new technologies like jetpack compose
