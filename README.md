@@ -10,3 +10,6 @@ i play football
 - Better features can be implemented
 - Try to include new technologies like jetpack compose
 - This is my second experience.
+- I love github.
+- 
+
