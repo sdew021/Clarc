@@ -15,3 +15,6 @@ i play football
 - I play videogames.
 - 
 
+## Hobbies
+- Coding
+
