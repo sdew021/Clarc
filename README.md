@@ -23,3 +23,8 @@ i play badminton
 - Coding
 - Cricket
 - Football
+
+
+# AKASHVCXII
+I PLAY CHESS
+I PLAY VIDEO GAMES
