@@ -5,6 +5,7 @@ i love watching technical guruji
 i play football
 i play cricket
 i play basketball
+i play  hockey
 
 ## Feedback
 - Good learning
