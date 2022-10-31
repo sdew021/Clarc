@@ -6,6 +6,7 @@ i play football
 i play cricket
 i play basketball
 i play  hockey
+i play badminton
 
 ## Feedback
 - Good learning
