@@ -17,4 +17,4 @@ i play football
 
 ## Hobbies
 - Coding
-
+- Cricket
