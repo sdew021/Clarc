@@ -13,7 +13,7 @@ i play football
 - I love github.
 - I watch youtube.
 - I play videogames.
-- 
+- compare with flutter and react native development 
 
 ## Hobbies
 - Coding
